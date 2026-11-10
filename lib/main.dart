@@ -276,7 +276,6 @@ class _LoginCreateScreenState extends State<LoginCreateScreen> with SingleTicker
                   child: TabBarView(
                     controller: _tabController,
                     children: [
-                      // Join Form
                       Column(
                         children: [
                           TextField(
@@ -311,7 +310,6 @@ class _LoginCreateScreenState extends State<LoginCreateScreen> with SingleTicker
                           ),
                         ],
                       ),
-                      // Create Form
                       SingleChildScrollView(
                         child: Column(
                           children: [
@@ -428,15 +426,13 @@ class _CalendarHomeScreenState extends State<CalendarHomeScreen> {
     });
   }
 
-  // Ring continuously, bypass silent mode, full hardware override
   void _triggerContinuousAlarm(String title) {
     setState(() {
       _isAlarmRinging = true;
       _alarmTitle = title;
     });
 
-    // Plays native system alarm tone continuously regardless of silent mode
-    FlutterRingtonePlayer().playAlarm(
+    FlutterRingtonePlayer.playAlarm(
       looping: true,
       volume: 1.0,
       asAlarm: true,
@@ -449,7 +445,7 @@ class _CalendarHomeScreenState extends State<CalendarHomeScreen> {
   }
 
   void _stopAlarm() {
-    FlutterRingtonePlayer().stop();
+    FlutterRingtonePlayer.stop();
     _vibrationTimer?.cancel();
     setState(() {
       _isAlarmRinging = false;
@@ -718,7 +714,6 @@ class _CalendarHomeScreenState extends State<CalendarHomeScreen> {
       ),
       body: Column(
         children: [
-          // Banner for live active alarm
           if (_isAlarmRinging)
             Container(
               width: double.infinity,
@@ -788,7 +783,6 @@ class _CalendarHomeScreenState extends State<CalendarHomeScreen> {
                         trailing: IconButton(
                           icon: const Icon(Icons.delete, color: Colors.grey),
                           onPressed: () {
-                            // Request admin password to delete event
                             showDialog(
                               context: context,
                               builder: (dCtx) {
