@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882938246314",
+    "project_id": "calendar-ce1b8",
+    "storage_bucket": "calendar-ce1b8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882938246314:android:teamsyncapp",
+        "android_client_info": {
+          "package_name": "com.example.teamsync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuIzr9s3FI2Epm_FoUtGn2tiVkBbGSwEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
